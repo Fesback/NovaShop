@@ -24,6 +24,7 @@ public class Producto {
     private LocalDateTime fechaCreacion;
     private Boolean activo;
 
+
     public Integer getId_producto() {
         return id_producto;
     }
