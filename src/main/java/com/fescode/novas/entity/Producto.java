@@ -16,7 +16,7 @@ public class Producto {
     private String descripcion;
     private BigDecimal precio;
     private int stock;
-
+    private  String imagenUrl;
     @ManyToOne
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
@@ -87,5 +87,13 @@ public class Producto {
 
     public void setActivo(Boolean activo) {
         this.activo = activo;
+    }
+
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
     }
 }
