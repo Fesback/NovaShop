@@ -61,12 +61,10 @@ public class UsuarioController {
         if (usuarioExistente.isPresent()) {
             Usuario usuario = usuarioExistente.get();
 
-            // Actualiza solo los campos necesarios
             usuario.setNombre(datosActualizados.getNombre());
             usuario.setApellido(datosActualizados.getApellido());
             usuario.setEmail(datosActualizados.getEmail());
 
-            // Actualiza contraseña solo si se proporciona
             if (datosActualizados.getContrasena() != null) {
                 usuario.setContrasena(passwordEncoder.encode(datosActualizados.getContrasena()));
             }
